@@ -5,8 +5,8 @@
  *with proper grammar, but the outcome is a piece of art,
 */
 
-init main(void)
+int main(void)
 {
-  prinf("with proper grammar, but the outcome is a piece of art,")
-  return(0)
+  prinf("with proper grammar, but the outcome is a piece of art,");
+  return(0);
  }
