@@ -3,13 +3,13 @@
 #include <stdio.h>
 /**
  * program assign a random number n to the variable each time is executed
- * if the number is positif, print positive
- * if the number is negative, print négative
+ * if the number is positive, print positive
+ * if the number is negative, print negative
  */
 
 /**
- * main -Entry point
- *return : always 0
+ * main - Entry point
+ * return - always 0
  */
 
 int main(void)
@@ -20,11 +20,11 @@ int main(void)
 		n = rand() - RAND_MAX / 2;
 		if (n > 0)
 		{
-			printf("%d is positive \n", n);
+			printf("%d is positive\n", n);
 		}
 		else if (n < 0)
 		{
-			printf("%d is negative \n", n);
+			printf("%d is negative\n", n);
 		}
 		else
 		{
