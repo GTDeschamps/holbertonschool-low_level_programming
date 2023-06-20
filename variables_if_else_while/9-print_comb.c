@@ -1,4 +1,6 @@
 #include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
 /**
  *main - Entry point
  *print all possible combinations of single digit numbers
@@ -8,18 +10,17 @@
 
 int main(void)
 {
-	int dgt;
+	int dgt = 0;
 
-	for (dgt = 0; dgt <= 9; dgt = dgt + 1)
+	for (dgt = 0; dgt < 10; dgt = dgt + 1)
 	{
-		putchar (dgt);
+		putchar ('0' + dgt);
+		if (dgt < 9)
+		{
+			putchar (',');
+			putchar (' ');
+		}
 	}
-	if (dgt < 9)
-	{
-		putchar (',');
-		putchar (' ');
-	}
-	if (dgt == 9)
 	{
 		putchar ('\n');
 	}
