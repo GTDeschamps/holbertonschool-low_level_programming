@@ -2,9 +2,11 @@
 #include <time.h>
 #include <stdio.h>
 /**
+ *main - Entry point
  * program assign a random number n to the variable each time is executed
  * if the number is positive, print positive
  * if the number is negative, print negative
+ *Return: always 0
  */
 
 /**
