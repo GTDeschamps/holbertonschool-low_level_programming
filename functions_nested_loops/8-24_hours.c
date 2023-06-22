@@ -32,4 +32,9 @@ void jack_bauer(void)
 		dm = 0;
 		m = 0;
 	} while (dh <= 2);
+	_putchar (dh);
+	_putchar (h);
+	_putchar (':');
+	_putchar (dm);
+	_putchar (m);
 }
