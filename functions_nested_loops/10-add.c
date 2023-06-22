@@ -3,8 +3,7 @@
  *add - Entry Point
  *@a: first integer
  *@b:  second integer
- *@add: addition
- *Result: n
+ *Return: add
  */
 
 int add(int a, int b)
