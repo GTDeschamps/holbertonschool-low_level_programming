@@ -1,0 +1,12 @@
+#include"main.h"
+/**
+ *add - Entry Point
+ *@a -first integer
+ *@b - second integer
+ *Result: n
+ */
+
+int add(int a, int b)
+{
+	return (a + b);
+}
