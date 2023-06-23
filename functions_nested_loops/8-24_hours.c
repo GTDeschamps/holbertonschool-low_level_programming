@@ -5,36 +5,28 @@
  *@dm - decimal of minutes
  *@h - hour
  *@dm - decimal of hour
- *Return: time
+ *Return: void
  */
 void jack_bauer(void)
 {
 	int m;
-	int dm;
+	int M;
 	int h;
-	int dh;
+	int H;
 
-	do {
-		do {
-			do {
-				do {
-					m++;
-				} while (m <= 9);
-				dm++;
-				m = 0;
-			} while (dm <= 6);
-			h++;
-			dm = 0;
-			m = 0;
-		} while (h <= 4);
-		dh++;
-		h = 0;
-		dm = 0;
-		m = 0;
-	} while (dh <= 2);
-	_putchar (dh);
-	_putchar (h);
-	_putchar (':');
-	_putchar (dm);
-	_putchar (m);
+	for (H = 0; H <= 2; H++)
+		for (h = 0; h <= 9; h++)
+			for (M = 0; M <= 5; M++)
+				for (m = 0; m <= 9; m++)
+				{
+					if ((H < 2) || ((H == 2) && (h <= 3)))
+					{
+						_putchar (H + '0');
+						_putchar (h + '0');
+						_putchar (':');
+						_putchar (M + '0');
+						_putchar (m + '0');
+						_putchar ('\n');
+					}
+				}
 }
