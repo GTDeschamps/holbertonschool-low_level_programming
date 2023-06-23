@@ -3,7 +3,7 @@
  *mul - Entry point
  *@a: character
  *@b: character
- *return: multiplication
+ *Return: multiplication
  */
 
 int mul(int a, int b)
