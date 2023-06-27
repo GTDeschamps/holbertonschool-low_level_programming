@@ -1,5 +1,4 @@
 #include "main.h"
-#include "3-puts.c"
 /**
  *print_rev - Entry point
  *@s : char
@@ -17,7 +16,7 @@ void print_rev(char *s)
 	str = str - 1;
 	while (str >= '\0')
 	{
-		_putchar (s[str]);
+		_putchar(s[str]);
 		str--;
 	}
 	_putchar ('\n');
