@@ -8,7 +8,7 @@
 char *leet(char *str)
 {
 	const char *letters = "aAeEoOtTlL";
-	const char *leetChars = "4433707711";
+	const char *leetChars = "4433007711";
 
 	int i;
 	int len = strlen(str);
