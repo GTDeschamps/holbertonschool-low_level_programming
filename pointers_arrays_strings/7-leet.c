@@ -7,39 +7,23 @@
 
 char *leet(char *str)
 {
+	const char *letters = "aAeEoOtTlL";
+	const char *leetChars = "4433707711";
+
 	int i;
 	int len = strlen(str);
 
 	for (i = 0; i < len; i++)
 	{
-	switch (str[i])
+		int j = 0;
+
+		while (letters[j] && str[i] != letters[j])
 		{
-		case 'a':
-		case 'A':
-			str[i] = '4';
-			break;
-		case 'e':
-		case 'E':
-			str[i] = '3';
-			break;
-		case 'i':
-		case 'I':
-			str[i] = '1';
-			break;
-		case 'o':
-		case 'O':
-			str[i] = '0';
-			break;
-		case 's':
-		case 'S':
-			str[i] = '5';
-			break;
-		case 't':
-		case 'T':
-			str[i] = '7';
-			break;
-		default:
-			break;
+			j++;
+		}
+		if (letters[j])
+		{
+			str[i] = leetChars[j];
 		}
 	}
 	return (str);
