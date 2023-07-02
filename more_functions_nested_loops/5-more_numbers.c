@@ -24,5 +24,4 @@ void more_numbers(void)
 		_putchar ('\n');
 		inc++;
 	}
-	_putchar ('\n');
 }
