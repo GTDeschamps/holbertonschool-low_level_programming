@@ -13,17 +13,18 @@
 char *str_concat(char *s1, char *s2)
 {
 	char *concat;
-	size_t len1 = strlen(s1);
-	size_t len2 = strlen(s2);
+	size_t len1, len2;
 
+	if (s1 == NULL && s2 == NULL)
+		return (strdup("\0"));
 	if (s1 == NULL)
-	{
-		return ("");
-	}
+		return (strdup(s2));
 	if (s2 == NULL)
-	{
-		return ("");
-	}
+		return (strdup(s1));
+
+	len1 = strlen(s1);
+	len2 = strlen(s2);
+
 	concat = malloc(sizeof(char) * (len1 + len2 + 1));
 	if (concat == NULL)
 	{
@@ -31,5 +32,6 @@ char *str_concat(char *s1, char *s2)
 	}
 	strcpy(concat, s1);
 	strcat(concat, s2);
+
 	return (concat);
 }
