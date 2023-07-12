@@ -29,7 +29,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		count++;
 	}
 	count = 0;
-	while (*(s2 + count) && (count <= n))
+	while (*(s2 + count) || (count <= n))
 	{
 		len2++;
 		count++;
