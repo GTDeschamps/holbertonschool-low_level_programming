@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 /**
- *calloc - Entry point
+ *_calloc - Entry point
  *@nmemb: number of memory
  *@size: size allocated
  *Return: function alloc
