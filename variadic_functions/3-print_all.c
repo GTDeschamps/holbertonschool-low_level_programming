@@ -3,41 +3,92 @@
 #include "variadic_functions.h"
 
 /**
- *
+* karac - char c
+* @totale: va_list
+* Return: char c
 */
+void karac(va_list totale)
+{
+	char c = va_arg(totale, int);
 
-print chara-c (va_list totale)
-{
-	int c;
-	printf ("%c", c = va_list totale);
+	printf("%c", c);
 }
-print chara-i (va_list totale)
+
+/**
+* karai - int i
+*@totale: va_list
+* Return: int i
+*/
+void karai(va_list totale)
 {
-	int i;
-	printf ("%d", i = va_list totale);
+	int i = va_arg(totale, int);
+
+	printf("%d", i);
 }
-print chara-f (va_list totale)
+
+/**
+* karaf - double f
+* @totale: va_list
+* Return: double f
+*/
+void karaf(va_list totale)
 {
-	double f;
-	printf ("%f", f = va_list totale);
+	double f = va_arg(totale, double);
+
+	printf("%f", f);
 }
-print chara-s (va_list totale)
+
+/**
+* karas - char *s
+* @totale: va_list
+* Return: char *s
+*/
+void karas(va_list totale)
 {
+char *s = va_arg(totale, char*);
+
 	if (s == NULL)
-	printf ("nil");
-	printf ("%s");
+	printf("nil");
+	printf("%s", s);
 }
-void printf-c
 
+/**
+* print_all - all
+* @format: const
+* Return: all
+*/
+void print_all(const char * const format, ...)
+{
+	value_t value[] = {
+		{"c", karac},
+		{"i", karai},
+		{"f", karaf},
+		{"s", karas},
+		};
 
-value_t - struct globale = {
-	{"c", chara-c}
-	{"i", chara-i}
-	{"f", chara-f}
-	{"s", chara-s}
-};
+		va_list totale;
+		int a = 0, b;
+		char *separator = "";
 
-va_list totale;
-int i = 0;
-char* globale;
+		va_start(totale, format);
+
+		while (format && format[a])
+		{
+			b = 0;
+			while (b < 4)
+			{
+				if (format[a] == *(value[b].variable))
+				{
+					printf("%s", separator);
+					value[b].func(totale);
+					separator = ", ";
+				}
+				b++;
+			}
+			a++;
+		}
+		va_end(totale);
+		printf("\n");
+}
+
 

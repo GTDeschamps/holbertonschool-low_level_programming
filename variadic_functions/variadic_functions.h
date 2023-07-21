@@ -4,9 +4,9 @@
 
 typedef struct value
 {
-	char* variable
-	void (*f)(va_list totale)
-}value_t;
+	char *variable;
+	void (*func)(va_list totale);
+} value_t;
 
 int sum_them_all(const unsigned int n, ...);
 void print_numbers(const char *separator, const unsigned int n, ...);
