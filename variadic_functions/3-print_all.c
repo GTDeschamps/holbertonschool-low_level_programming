@@ -47,9 +47,7 @@ void karas(va_list totale)
 {
 char *s = va_arg(totale, char*);
 
-	if (s == NULL)
-	printf("nil");
-	printf("%s", s);
+printf("%s", (s == NULL) ? "(nil)" : s);
 }
 
 /**
