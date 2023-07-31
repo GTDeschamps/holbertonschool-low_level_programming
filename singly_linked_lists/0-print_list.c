@@ -3,10 +3,10 @@
 #include "lists.h"
 
 /**
-*print_list - Entry point
-*@h: element of liste
-*Return: size_t
-*/
+ *print_list - Entry point
+ *@h: element of liste
+ *Return: size_t
+ */
 
 size_t print_list(const list_t *h)
 {
