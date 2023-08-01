@@ -7,7 +7,6 @@
  * free_list - Entry point
  * Description:  add in the list
  * @head: start the list
- * @str: element of list
  * Return: void
 */
 
