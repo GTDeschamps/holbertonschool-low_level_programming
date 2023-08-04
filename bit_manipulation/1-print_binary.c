@@ -5,7 +5,7 @@
 /**
  * print_binary - Entry point
  * @n: integer
- * Return: unsigned int
+ * Return: void
  */
 
 void print_binary(unsigned long int n)
