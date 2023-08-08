@@ -6,24 +6,22 @@
 #include <sys/stat.h>
 
 /**
- *create_file - Entry point
+ *append_text_to_file - Entry point
  *@filename: name of the file
  *@text_content: content of file
- *Return: size of file
+ *Return: integer
  */
 
-int create_file(const char *filename, char *text_content)
+int append_text_to_file(const char *filename, char *text_content)
 {
 	int descript;
-	ssize_t bytes_wrt;
 	ssize_t text_len;
+	ssize_t bytes_wrt;
 
 	if (filename == NULL)
-	{
 		return (-1);
-	}
 
-	descript = open(filename, O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR);
+	descript = open(filename, O_WRONLY | O_APPEND);
 	if (descript == -1)
 		return (-1);
 
