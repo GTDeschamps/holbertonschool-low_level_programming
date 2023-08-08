@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <string.h>
+#include <sys/stat.h>
 
 /**
 *create_file - Entry point
@@ -25,7 +26,7 @@ int create_file(const char *filename, char *text_content)
 	if (descript == -1)
 		return (-1);
 
-	if (text_content == NULL)
+	if (text_content != NULL)
 	{
 		text_len = strlen(text_content);
 		bytes_wrt = write(descript, text_content, text_len);
