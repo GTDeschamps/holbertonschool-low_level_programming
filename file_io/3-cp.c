@@ -6,9 +6,13 @@
 #include <sys/stat.h>
 #include <errno.h>
 
-#define BUFFER_SIZE 1024;
-
 /**
+ * print_error - Entry point
+ * main - Programme Principal
+ * @message: content of file
+ * @filename: name of file
+ *
+ * Return: Void
  */
 
 void print_error(const char *message, const char *filename)
@@ -22,7 +26,8 @@ int main(int argc, char *argv[])
 	const char *file_to;
 	int descript_from;
 	int descript_to;
-
+	int nb; /*nb: nombre de caratère dans le fichier*/
+	char buffer[1024];
 
 	if (argc != 3)
 	{
@@ -47,6 +52,15 @@ int main(int argc, char *argv[])
 		exit(99);
 	}
 
+	while (nb > 0)
+	{
+		nb = read(descript_from, buffer, 1024);
+		write(descript_to, buffer, nb);
+	}
+	close(descript_from);
+	close(descript_to);
+
+	return (0);
 }
 
 
