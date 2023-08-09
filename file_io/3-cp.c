@@ -61,6 +61,19 @@ int main(int argc, char *argv[])
 	close(descript_to);
 
 	return (0);
+
+	if (close(descript_from) == -1)
+	{
+		print_error("Error: Can't close descript %d\n", file_from);
+		close(descript_from);
+		exit(100);
+	}
+
+	if (close(descript_to) == -1)
+	{
+		print_error("Error: Can't close descript %d\n", file_to);
+		exit(100);
+	}
 }
 
 
