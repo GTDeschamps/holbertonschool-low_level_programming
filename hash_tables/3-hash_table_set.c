@@ -35,7 +35,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (node == NULL)
 	{
 		new_node->next = NULL;
-		node = new_node;
+		ht->array[index] = new_node;
 	}
 	else
 	{
@@ -46,10 +46,11 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 			node->value = strdup(value);
 			return (1);
 			}
+			node = node->next;
 		}
 		node = ht->array[index];
 		new_node->next = node;
-		node = new_node;
+		ht->array[index] = new_node;
 	}
 	return (1);
 }
